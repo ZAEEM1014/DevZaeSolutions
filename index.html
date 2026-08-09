@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("dz-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevZaeSolution — Flutter &amp; Web Development Studio</title>
+<meta name="description" content="DevZaeSolution builds Flutter mobile apps and web platforms that scale — from concept to App Store, Play Store, and production. Led by Zaeem Akhtar, 50+ projects delivered.">
+<meta name="author" content="DevZaeSolution">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DevZaeSolution — Flutter & Web Development Studio">
+<meta property="og:description" content="We build Flutter apps and websites that scale, from first sketch to shipped product.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages/navbar.css">
+<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/pages/home.css">
+<link rel="stylesheet" href="css/pages/footer.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <nav class="container nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Build</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span></button>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Light mode</span></button></li>
+    <li><a href="contact.html" class="btn btn-primary">Let's Build</a></li>
+  </ul>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main>
+
+  <!-- ============ HERO — horizontal split, not centered ============ -->
+  <section class="hero">
+    <div class="hero-gradient"></div>
+    <div class="container">
+      <div class="hero-body">
+        <div class="hero-content">
+          <div class="process-cinematic">
+            <p class="eyebrow">how we work</p>
+            <h2>A proven process, concept to launch.</h2>
+          </div>
+          <h1 class="hero-title">Apps and websites built to <span class="accent">scale</span>, not just ship.</h1>
+          <p class="hero-subtitle">DevZaeSolution is a Flutter and web development studio. We take products from a first sketch to the App Store, Play Store, and production — with one codebase and no shortcuts.</p>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary">Start a project →</a>
+            <a href="work.html" class="btn btn-outline">See the work</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-ring r1"></div>
+          <div class="visual-ring r2"></div>
+          <div class="visual-badge">
+            <span class="visual-badge-glow"></span>
+            <span class="visual-badge-mark">DZ</span>
+          </div>
+          <div class="float-card fc1">Clean Code</div>
+          <div class="float-card fc2">Fast Ship</div>
+          <div class="float-card fc3">Bold Design</div>
+
+          <div class="orbit-attrs" aria-hidden="true">
+            <div class="orbit-attr" style="--angle:270deg"><span class="oa-num">01</span> Discover</div>
+            <div class="orbit-attr" style="--angle:342deg"><span class="oa-num">02</span> Design</div>
+            <div class="orbit-attr" style="--angle:54deg"><span class="oa-num">03</span> Develop</div>
+            <div class="orbit-attr" style="--angle:126deg"><span class="oa-num">04</span> Deploy</div>
+            <div class="orbit-attr" style="--angle:198deg"><span class="oa-num">05</span> Evolve</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES PREVIEW ============ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">what we do</p>
+        <h2>Full-stack development, end to end.</h2>
+        <p>Cross-platform mobile apps and modern web applications, built with a single team from architecture through launch.</p>
+      </div>
+      <div class="services-preview-grid">
+        <article class="feature-card reveal" data-d="1">
+          <div class="fc-icon">📱</div>
+          <h3>Flutter Mobile Apps</h3>
+          <p class="fc-desc">Cross-platform iOS and Android apps from one codebase — native performance, 60fps animation.</p>
+          <ul class="fc-hover-list">
+            <li>Material &amp; Cupertino UI</li>
+            <li>Push notifications</li>
+            <li>Offline-first data</li>
+          </ul>
+          <a href="services.html#services" class="fc-link">Learn more →</a>
+        </article>
+        <article class="feature-card reveal" data-d="2">
+          <div class="fc-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p class="fc-desc">Responsive sites and web apps in Flutter Web, React, or plain HTML/CSS/JS.</p>
+          <ul class="fc-hover-list">
+            <li>SEO-first markup</li>
+            <li>Performance budgets</li>
+            <li>CMS integrations</li>
+          </ul>
+          <a href="services.html#services" class="fc-link">Learn more →</a>
+        </article>
+        <article class="feature-card reveal" data-d="3">
+          <div class="fc-icon">🎨</div>
+          <h3>UI / UX Design</h3>
+          <p class="fc-desc">Research, wireframes, and high-fidelity prototypes that put experience ahead of decoration.</p>
+          <ul class="fc-hover-list">
+            <li>User research</li>
+            <li>Design systems</li>
+            <li>Usability testing</li>
+          </ul>
+          <a href="services.html#services" class="fc-link">Learn more →</a>
+        </article>
+      </div>
+      <div class="section-foot-link reveal">
+        <a href="services.html" class="btn btn-outline">View all services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US / EDGE ============ -->
+  <section id="edge" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">our edge</p>
+        <h2>What makes the difference.</h2>
+      </div>
+      <div class="edge-list reveal">
+        <div class="edge-item"><div class="edge-num">01</div><div><h3>Cross-platform expertise</h3><p>Deep Flutter fluency means iOS, Android, and Web ship from a single codebase, flawlessly.</p></div></div>
+        <div class="edge-item"><div class="edge-num">02</div><div><h3>End-to-end ownership</h3><p>From concept and design through deployment and support — one team, no handoffs.</p></div></div>
+        <div class="edge-item"><div class="edge-num">03</div><div><h3>Performance-first</h3><p>Every animation and interaction is tuned for 60fps. Speed is treated as a feature.</p></div></div>
+        <div class="edge-item"><div class="edge-num">04</div><div><h3>Transparent communication</h3><p>No jargon, no surprises. You always know exactly where your project stands.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK PREVIEW ============ -->
+  <section id="work" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">selected work</p>
+        <h2>Recent launches.</h2>
+        <p>A sample of the products we've taken from sketch to shipped.</p>
+      </div>
+      <div class="work-preview-grid reveal">
+        <article class="project-card">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>BuzzMe</h3>
+          <p>A social engagement and live-streaming platform enabling real-time interaction.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>Bhookh Lagi</h3>
+          <p>Full-featured food ordering and delivery platform with multi-vendor management.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Node.js</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-cat">Web</span></div>
+          <h3>Rapid Estimate &amp; Design</h3>
+          <p>A UK construction-estimation platform for cost tools and collaborative design.</p>
+          <div class="tag-row"><span class="tag">Flutter Web</span><span class="tag">Vercel</span></div>
+        </article>
+      </div>
+      <div class="section-foot-link reveal">
+        <a href="work.html" class="btn btn-outline">View all projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">client feedback</p>
+        <h2>What clients say.</h2>
+      </div>
+      <div class="testi-grid reveal">
+        <div class="testi-card"><p class="quote">"DevZaeSolution delivered an exceptional Flutter app that exceeded our expectations. The attention to detail made the process smooth."</p><div class="testi-author"><div class="testi-avatar">JD</div><div><div class="testi-name">John Doe</div><div class="testi-role">CEO, TechStart Inc.</div></div></div></div>
+        <div class="testi-card"><p class="quote">"Working with DevZaeSolution was a game-changer. They built a beautiful, fast web platform our customers love."</p><div class="testi-author"><div class="testi-avatar">SM</div><div><div class="testi-name">Sarah Miller</div><div class="testi-role">Founder, DesignHub</div></div></div></div>
+        <div class="testi-card"><p class="quote">"Professional, responsive, and incredibly skilled. Our mobile app launched on time and has run flawlessly since."</p><div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Robert Khan</div><div class="testi-role">Product Manager, LogiTech</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="cta" class="section-alt">
+    <div class="container">
+      <div class="cta reveal">
+        <p class="eyebrow">get in touch</p>
+        <h2>Ready to build something amazing?</h2>
+        <p>Tell us about your project and we'll respond within 24 hours with next steps.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-amber">Start a project →</a>
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Message on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="ft-brand">
+        <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+        <p>Flutter and web development studio led by Zaeem Akhtar. 50+ products shipped from sketch to production.</p>
+        <div class="ft-socials">
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+          <a href="mailto:zaeemakh117@gmail.com" aria-label="Email" class="mono">@</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Flutter Mobile Apps</a></li>
+          <li><a href="services.html#services">Web Development</a></li>
+          <li><a href="services.html#services">UI/UX Design</a></li>
+          <li><a href="services.html#services">App Deployment</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h4>Start a conversation</h4>
+        <p>Email: <a href="mailto:zaeemakh117@gmail.com">zaeemakh117@gmail.com</a></p>
+        <p>Location: Pakistan (remote-friendly)</p>
+        <p>Hours: Mon–Fri, 9 AM – 6 PM PKT</p>
+        <a href="contact.html" class="btn btn-outline">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2026 DevZaeSolution. All rights reserved.</p>
+      <p class="ft-tag mono">Built by DevZae Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/utils/themeToggle.js"></script>
+<script src="js/components/scene3d.js"></script>
+<script src="js/components/heroScroll.js"></script>
+<script src="js/utils/scrollReveal.js"></script>
+<script src="js/utils/counters.js"></script>
+</body>
+</html>

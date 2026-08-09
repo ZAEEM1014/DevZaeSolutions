@@ -1,0 +1,37 @@
+/* ==========================================================================
+   About page
+   ========================================================================== */
+.founder-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:center;}
+@media(max-width:800px){.founder-wrap{grid-template-columns:1fr;}}
+.founder-photo{
+  aspect-ratio:1;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);
+}
+.founder-photo img{width:100%;height:100%;object-fit:cover;}
+.founder-text h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:18px;}
+.founder-text p{font-size:16px;margin-bottom:16px;}
+.founder-role{font-family:var(--font-mono);color:var(--teal);font-size:13px;margin-bottom:10px;display:block;}
+.founder-links{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap;}
+
+/* ---- Expertise bars ---- */
+.skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+@media(max-width:800px){.skills-wrap{grid-template-columns:1fr;}}
+.skill-bar-group{display:flex;flex-direction:column;gap:20px;}
+.skill-bar .skill-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px;}
+.skill-bar .skill-label span:last-child{color:var(--teal);font-family:var(--font-mono);}
+.bar-track{height:8px;border-radius:100px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden;}
+.bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--teal),var(--amber));width:0;transition:width 1.1s cubic-bezier(.4,0,.2,1);}
+
+.values-list{display:flex;flex-direction:column;gap:22px;}
+.value-item{display:flex;gap:16px;}
+.value-num{font-family:var(--font-mono);color:var(--amber);font-size:13px;padding-top:3px;flex-shrink:0;}
+.value-item h4{font-size:16px;margin-bottom:6px;}
+.value-item p{font-size:14px;}
+
+/* ---- Milestones ---- */
+.milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+@media(max-width:800px){.milestones{grid-template-columns:repeat(2,1fr);}}
+.milestone{background:var(--surface);padding:30px 26px;}
+.milestone .m-year{font-family:var(--font-mono);font-size:12.5px;color:var(--amber);}
+.milestone h4{font-size:16px;margin:10px 0 8px;}
+.milestone p{font-size:13.5px;}

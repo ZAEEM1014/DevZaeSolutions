@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("dz-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — DevZaeSolution</title>
+<meta name="description" content="Contact DevZaeSolution at mza@devzaesolutions.com or send a project enquiry through the form and get a success confirmation when it is submitted.">
+<meta name="author" content="DevZaeSolution">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages/navbar.css">
+<link rel="stylesheet" href="css/pages/contact.css">
+<link rel="stylesheet" href="css/pages/footer.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar" id="navbar">
+  <nav class="container nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Build</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span></button>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Light mode</span></button></li>
+    <li><a href="contact.html" class="btn btn-primary">Let's Build</a></li>
+  </ul>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main>
+
+  <section class="page-hero glass-section">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+      <p class="eyebrow">get in touch</p>
+      <h1>Let's build something amazing.</h1>
+      <p class="lede">Tell us about your project below and we'll respond within 24 hours with next steps — or reach out directly using the details on the right.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <aside class="contact-info glass-card reveal">
+          <h3>Contact details</h3>
+          <p>Prefer to skip the form? Reach out directly — we typically reply within a few hours on weekdays.</p>
+          <div class="ci-list">
+            <div class="ci-item"><div class="ci-icon">📍</div><div><h4>Location</h4><p>Pakistan (remote-friendly, worldwide)</p></div></div>
+            <div class="ci-item"><div class="ci-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:mza@devzaesolutions.com">mza@devzaesolutions.com</a></p></div></div>
+            <div class="ci-item"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Mon–Fri, 9 AM – 6 PM PKT</p></div></div>
+            <div class="ci-item"><div class="ci-icon">💬</div><div><h4>Response time</h4><p>Within 24 hours, usually sooner</p></div></div>
+          </div>
+          <div class="ci-socials">
+            <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+            <a href="mailto:mza@devzaesolutions.com" aria-label="Email" class="mono">@</a>
+          </div>
+        </aside>
+
+        <div class="contact-form-panel glass-card reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="fName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fName" name="name" placeholder="Jane Doe" autocomplete="name">
+              <span class="err" id="fNameErr"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fEmail">Email Address <span class="req">*</span></label>
+                <input type="email" id="fEmail" name="email" placeholder="jane@example.com" autocomplete="email">
+                <span class="err" id="fEmailErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="fPhone">Phone Number</label>
+                <input type="tel" id="fPhone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                <span class="err" id="fPhoneErr"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fService">What do you need? <span class="req">*</span></label>
+              <div class="custom-select" id="serviceDropdown">
+                <button type="button" class="custom-select-trigger" id="serviceTrigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span id="serviceLabel">— Select a service —</span>
+                  <span class="custom-select-arrow" aria-hidden="true"></span>
+                </button>
+                <div class="custom-select-menu" id="serviceMenu" role="listbox" aria-label="Select a service">
+                  <button type="button" class="custom-select-option" data-value="Flutter Mobile App">Flutter Mobile App</button>
+                  <button type="button" class="custom-select-option" data-value="Web Development">Web Development</button>
+                  <button type="button" class="custom-select-option" data-value="UI/UX Design">UI/UX Design</button>
+                  <button type="button" class="custom-select-option" data-value="App Deployment">App Deployment</button>
+                  <button type="button" class="custom-select-option" data-value="Hosting & Cloud">Hosting &amp; Cloud</button>
+                  <button type="button" class="custom-select-option" data-value="Maintenance & Support">Maintenance &amp; Support</button>
+                  <button type="button" class="custom-select-option" data-value="Not sure yet">Not sure yet</button>
+                </div>
+              </div>
+              <input type="hidden" id="fService" name="service" value="">
+              <span class="err" id="fServiceErr"></span>
+            </div>
+
+            <div class="form-group message-group">
+              <label for="fMsg">Project Details <span class="req">*</span></label>
+              <textarea id="fMsg" name="message" rows="6" placeholder="Tell us about your project — goals, timeline, and anything you already have (designs, an existing app, a deadline)…"></textarea>
+              <div class="form-meta">
+                <span class="err" id="fMsgErr"></span>
+                <span class="char-count"><span id="charCount">0</span>/600</span>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="cb-label">
+                <input type="checkbox" id="fTerms">
+                <span class="cb-mark"></span>
+                <span class="cb-text">I agree that DevZaeSolution may contact me about this inquiry <span class="req">*</span></span>
+              </label>
+              <span class="err" id="fTermsErr"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+              <span class="btn-label">Send Message →</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="success-screen" id="successScreen" aria-live="polite">
+            <div class="success-badge">Sent</div>
+            <h3>Sent successfully</h3>
+            <p>Your query has been delivered to mza@devzaesolutions.com. We’ll get back to you within 24 hours.</p>
+            <div class="success-actions">
+              <button type="button" class="btn btn-primary" id="newQueryBtn">New query</button>
+              <a href="mailto:mza@devzaesolutions.com" class="btn btn-outline">Email directly</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="ft-brand">
+        <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+        <p>Flutter and web development studio led by Zaeem Akhtar. 50+ products shipped from sketch to production.</p>
+        <div class="ft-socials">
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+          <a href="mailto:zaeemakh117@gmail.com" aria-label="Email" class="mono">@</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Flutter Mobile Apps</a></li>
+          <li><a href="services.html#services">Web Development</a></li>
+          <li><a href="services.html#services">UI/UX Design</a></li>
+          <li><a href="services.html#services">App Deployment</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h4>Start a conversation</h4>
+        <p>Email: <a href="mailto:mza@devzaesolutions.com">mza@devzaesolutions.com</a></p>
+        <p>Location: Pakistan (remote-friendly)</p>
+        <p>Hours: Mon–Fri, 9 AM – 6 PM PKT</p>
+        <a href="contact.html" class="btn btn-outline">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2026 DevZaeSolution. All rights reserved.</p>
+      <p class="ft-tag mono">Built by DevZae Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/utils/themeToggle.js"></script>
+<script src="js/components/scene3d.js"></script>
+<script src="js/utils/scrollReveal.js"></script>
+<script src="js/utils/contactForm.js"></script>
+</body>
+</html>

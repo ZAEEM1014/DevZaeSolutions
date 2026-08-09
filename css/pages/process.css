@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Process page
+   ========================================================================== */
+.process-list{display:flex;flex-direction:column;}
+.process-item{
+  display:grid;grid-template-columns:100px 1fr;gap:32px;
+  padding:34px 0;border-top:1px solid var(--line);
+}
+.process-item:last-child{border-bottom:1px solid var(--line);}
+.process-num{font-family:var(--font-display);font-size:42px;font-weight:700;color:transparent;-webkit-text-stroke:1.4px var(--line);}
+.process-item.active .process-num{-webkit-text-stroke:1.4px var(--teal);color:transparent;}
+.process-body h3{font-size:21px;margin-bottom:8px;}
+.process-body p{font-size:15px;max-width:560px;margin-bottom:14px;}
+.process-body .pb-tags{display:flex;gap:8px;flex-wrap:wrap;}
+
+/* ---- Timeline estimate table ---- */
+.timeline-table{width:100%;border-collapse:collapse;margin-top:8px;}
+.timeline-table th,.timeline-table td{text-align:left;padding:16px 18px;font-size:14.5px;border-bottom:1px solid var(--line);}
+.timeline-table th{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
+.timeline-table td{color:var(--text);}
+.timeline-table td.muted-cell{color:var(--muted);}
+.timeline-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);padding:8px 24px;background:var(--surface);}

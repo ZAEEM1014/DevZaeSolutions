@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("dz-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — DevZaeSolution</title>
+<meta name="description" content="Flutter mobile apps, web development, UI/UX design, app deployment, cloud hosting and ongoing support — full-stack services from DevZaeSolution.">
+<meta name="author" content="DevZaeSolution">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages/navbar.css">
+<link rel="stylesheet" href="css/pages/services.css">
+<link rel="stylesheet" href="css/pages/footer.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar" id="navbar">
+  <nav class="container nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Build</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span></button>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Light mode</span></button></li>
+    <li><a href="contact.html" class="btn btn-primary">Let's Build</a></li>
+  </ul>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main>
+
+  <section class="page-hero glass-section">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Services</span></div>
+      <p class="eyebrow">what we do</p>
+      <h1>Full-stack development, end to end.</h1>
+      <p class="lede">Cross-platform mobile apps and modern web applications, built with a single team from architecture through launch — six services, one point of contact.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="services-grid-full">
+        <article class="feature-card reveal" data-d="1">
+          <div class="fc-icon">📱</div>
+          <h3>Flutter Mobile Apps</h3>
+          <p class="fc-desc">Cross-platform iOS and Android apps from one codebase — native performance, 60fps animation, and a single Material/Cupertino UI layer.</p>
+          <ul class="fc-hover-list">
+            <li>State management (Riverpod/Bloc)</li>
+            <li>Offline-first &amp; local storage</li>
+            <li>Push notifications</li>
+            <li>In-app purchases</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+        <article class="feature-card reveal" data-d="2">
+          <div class="fc-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p class="fc-desc">Responsive sites and web apps in Flutter Web, React, or plain HTML/CSS/JS — optimized for speed and search visibility.</p>
+          <ul class="fc-hover-list">
+            <li>Server-side rendering</li>
+            <li>Core Web Vitals tuning</li>
+            <li>CMS &amp; headless integrations</li>
+            <li>Progressive Web Apps</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+        <article class="feature-card reveal" data-d="3">
+          <div class="fc-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p class="fc-desc">Research, wireframes, and high-fidelity prototypes that put user experience ahead of decoration.</p>
+          <ul class="fc-hover-list">
+            <li>User research &amp; personas</li>
+            <li>Wireframes &amp; prototypes</li>
+            <li>Design systems</li>
+            <li>Usability testing</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+        <article class="feature-card reveal" data-d="4">
+          <div class="fc-icon">🚀</div>
+          <h3>App Deployment</h3>
+          <p class="fc-desc">App Store and Play Store submission, ASO, beta testing, and CI/CD pipelines for repeatable releases.</p>
+          <ul class="fc-hover-list">
+            <li>App Store &amp; Play Store review</li>
+            <li>ASO &amp; store listing copy</li>
+            <li>TestFlight / internal testing</li>
+            <li>Automated release pipelines</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+        <article class="feature-card reveal" data-d="5">
+          <div class="fc-icon">☁️</div>
+          <h3>Hosting &amp; Cloud</h3>
+          <p class="fc-desc">Vercel and Firebase hosting, database management, and infrastructure that scales with your users.</p>
+          <ul class="fc-hover-list">
+            <li>Vercel / Firebase hosting</li>
+            <li>Database architecture</li>
+            <li>Monitoring &amp; alerting</li>
+            <li>Cost optimization</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+        <article class="feature-card reveal" data-d="6">
+          <div class="fc-icon">🔧</div>
+          <h3>Maintenance &amp; Support</h3>
+          <p class="fc-desc">Ongoing updates, monitoring, and performance tuning so the product keeps running after launch day.</p>
+          <ul class="fc-hover-list">
+            <li>OS &amp; dependency updates</li>
+            <li>Bug fixes &amp; patches</li>
+            <li>Performance audits</li>
+            <li>SLA-backed support</li>
+          </ul>
+          <a href="contact.html" class="fc-link">Get a quote →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="engage" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">how we engage</p>
+        <h2>Pick the model that fits.</h2>
+        <p>Every engagement is scoped to the project — these are starting points, not fixed menus.</p>
+      </div>
+      <div class="engage-grid reveal">
+        <div class="engage-card">
+          <h3>Fixed Scope</h3>
+          <div class="price">Project-based <span>/ quoted upfront</span></div>
+          <ul>
+            <li>Defined deliverables &amp; timeline</li>
+            <li>Single milestone-based payment plan</li>
+            <li>Best for a clear, well-scoped MVP</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Discuss scope</a>
+        </div>
+        <div class="engage-card featured">
+          <h3>Dedicated Team</h3>
+          <div class="price">Monthly <span>/ retained capacity</span></div>
+          <ul>
+            <li>A developer (or pair) reserved for you</li>
+            <li>Weekly check-ins &amp; sprint planning</li>
+            <li>Best for ongoing product development</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Reserve capacity</a>
+        </div>
+        <div class="engage-card">
+          <h3>Support Retainer</h3>
+          <div class="price">Monthly <span>/ hours bank</span></div>
+          <ul>
+            <li>Bug fixes &amp; small features</li>
+            <li>Priority response times</li>
+            <li>Best for apps already in production</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Ask about hours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">questions</p>
+        <h2>Before you reach out.</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item open">
+          <button class="faq-q"><span>How long does a typical project take?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>A focused MVP typically takes 4–8 weeks from kickoff to first release. Larger, multi-platform builds run 3–6 months. You'll get a firm estimate after the discovery call, tied to the specific scope.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do you work with an existing codebase?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes — we regularly take over Flutter and web projects mid-flight. The first step is always a short technical audit so estimates reflect the real state of the code, not assumptions.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Who owns the code once the project ships?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>You do, fully. Repositories, design files, and store listings are transferred to your accounts at handoff — there's no lock-in to DevZaeSolution for future work.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can you design and develop, or just one?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Both, and either. Some clients arrive with finished designs ready to build; others need the full research-to-launch process. The engagement is scoped around what you already have.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="section-alt">
+    <div class="container">
+      <div class="cta reveal">
+        <p class="eyebrow">get in touch</p>
+        <h2>Not sure which service you need?</h2>
+        <p>Tell us what you're building and we'll recommend the right approach — no obligation.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-amber">Start a project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="ft-brand">
+        <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+        <p>Flutter and web development studio led by Zaeem Akhtar. 50+ products shipped from sketch to production.</p>
+        <div class="ft-socials">
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+          <a href="mailto:zaeemakh117@gmail.com" aria-label="Email" class="mono">@</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Flutter Mobile Apps</a></li>
+          <li><a href="services.html#services">Web Development</a></li>
+          <li><a href="services.html#services">UI/UX Design</a></li>
+          <li><a href="services.html#services">App Deployment</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h4>Start a conversation</h4>
+        <p>Email: <a href="mailto:zaeemakh117@gmail.com">zaeemakh117@gmail.com</a></p>
+        <p>Location: Pakistan (remote-friendly)</p>
+        <p>Hours: Mon–Fri, 9 AM – 6 PM PKT</p>
+        <a href="contact.html" class="btn btn-outline">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2026 DevZaeSolution. All rights reserved.</p>
+      <p class="ft-tag mono">Built by DevZae Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/utils/themeToggle.js"></script>
+<script src="js/components/scene3d.js"></script>
+<script src="js/utils/scrollReveal.js"></script>
+<script src="js/utils/faq.js"></script>
+</body>
+</html>

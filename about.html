@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("dz-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — DevZaeSolution</title>
+<meta name="description" content="DevZaeSolution is led by Zaeem Akhtar, a Flutter and web developer with 50+ shipped projects. Learn about the studio's story, values and expertise.">
+<meta name="author" content="DevZaeSolution">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages/navbar.css">
+<link rel="stylesheet" href="css/pages/about.css">
+<link rel="stylesheet" href="css/pages/footer.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar" id="navbar">
+  <nav class="container nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Build</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span></button>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Light mode</span></button></li>
+    <li><a href="contact.html" class="btn btn-primary">Let's Build</a></li>
+  </ul>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main>
+
+  <section class="page-hero glass-section">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>About</span></div>
+      <p class="eyebrow">the studio</p>
+      <h1>Founded to bridge ideas and shipped software.</h1>
+      <p class="lede">DevZaeSolution started as a passion for building beautiful, functional apps and grew into a full-service studio for Flutter mobile apps and modern web platforms.</p>
+    </div>
+  </section>
+
+  <section id="founder">
+    <div class="container">
+      <div class="founder-wrap">
+        <div class="founder-photo reveal">
+          <img src="assets/images/zaeem-placeholder.svg" alt="Zaeem Akhtar, Founder of DevZaeSolution" loading="lazy">
+        </div>
+        <div class="founder-text reveal">
+          <span class="founder-role mono">Zaeem Akhtar — Founder &amp; Lead Developer</span>
+          <h2>Every project is a chance to push boundaries.</h2>
+          <p>Expert Flutter and web developer with 50+ successful projects delivered across industries, specializing in Dart and modern web technologies with a close eye on UI/UX and performance.</p>
+          <p>What started as a one-person passion for building beautiful, functional apps grew into a studio that treats every product — from a two-week MVP to a multi-month enterprise platform — with the same obsessive attention to detail.</p>
+          <div class="founder-links">
+            <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Connect on LinkedIn</a>
+            <a href="mailto:zaeemakh117@gmail.com" class="btn btn-outline">Email directly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">expertise</p>
+        <h2>Where the depth is.</h2>
+      </div>
+      <div class="skills-wrap reveal">
+        <div class="skill-bar-group">
+          <div class="skill-bar"><div class="skill-label"><span>Flutter &amp; Dart</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" data-w="95"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>Web Development</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>UI/UX Design</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>Backend &amp; Cloud</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="82"></div></div></div>
+        </div>
+        <div class="values-list">
+          <div class="value-item"><span class="value-num mono">01</span><div><h4>End-to-end ownership</h4><p>One team, from the first sketch through App Store review and beyond.</p></div></div>
+          <div class="value-item"><span class="value-num mono">02</span><div><h4>Performance-first</h4><p>60fps is treated as a requirement, not an aspiration.</p></div></div>
+          <div class="value-item"><span class="value-num mono">03</span><div><h4>Transparent communication</h4><p>No jargon, no surprises — you always know exactly where things stand.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="milestones">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">the journey</p>
+        <h2>A few milestones.</h2>
+      </div>
+      <div class="milestones reveal">
+        <div class="milestone"><span class="m-year mono">Year 1</span><h4>First shipped app</h4><p>A single Flutter build taught the value of a proper release pipeline.</p></div>
+        <div class="milestone"><span class="m-year mono">Year 2</span><h4>First enterprise client</h4><p>Rapid Estimate &amp; Design brought Flutter Web into production at scale.</p></div>
+        <div class="milestone"><span class="m-year mono">Year 3</span><h4>50th project delivered</h4><p>Across social, logistics, food and construction verticals.</p></div>
+        <div class="milestone"><span class="m-year mono">Today</span><h4>100K+ downloads</h4><p>Products shipped by DevZaeSolution are running in production for real users.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="section-alt">
+    <div class="container">
+      <div class="cta reveal">
+        <p class="eyebrow">get in touch</p>
+        <h2>Let's talk about your project.</h2>
+        <p>Tell us what you're building — we'll reply within 24 hours.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-amber">Start a project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="ft-brand">
+        <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+        <p>Flutter and web development studio led by Zaeem Akhtar. 50+ products shipped from sketch to production.</p>
+        <div class="ft-socials">
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+          <a href="mailto:zaeemakh117@gmail.com" aria-label="Email" class="mono">@</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Flutter Mobile Apps</a></li>
+          <li><a href="services.html#services">Web Development</a></li>
+          <li><a href="services.html#services">UI/UX Design</a></li>
+          <li><a href="services.html#services">App Deployment</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h4>Start a conversation</h4>
+        <p>Email: <a href="mailto:zaeemakh117@gmail.com">zaeemakh117@gmail.com</a></p>
+        <p>Location: Pakistan (remote-friendly)</p>
+        <p>Hours: Mon–Fri, 9 AM – 6 PM PKT</p>
+        <a href="contact.html" class="btn btn-outline">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2026 DevZaeSolution. All rights reserved.</p>
+      <p class="ft-tag mono">Built by DevZae Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/utils/themeToggle.js"></script>
+<script src="js/components/scene3d.js"></script>
+<script src="js/utils/scrollReveal.js"></script>
+</body>
+</html>

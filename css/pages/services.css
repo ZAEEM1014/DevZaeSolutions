@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Services page
+   ========================================================================== */
+.services-grid-full{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+@media(max-width:900px){.services-grid-full{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid-full{grid-template-columns:1fr;}}
+
+/* ---- Engagement models ---- */
+.engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:900px){.engage-grid{grid-template-columns:1fr;}}
+.engage-card{
+  padding:32px 30px;border-radius:var(--radius);
+  border:1px solid var(--line);background:var(--surface);
+  display:flex;flex-direction:column;gap:14px;
+}
+.engage-card.featured{border-color:rgba(76,224,210,0.4);background:var(--surface-2);position:relative;}
+.engage-card.featured::before{
+  content:"Most requested";position:absolute;top:-13px;left:30px;
+  background:var(--teal);color:var(--ink);font-family:var(--font-mono);
+  font-size:11px;padding:4px 12px;border-radius:100px;font-weight:700;
+}
+.engage-card h3{font-size:19px;}
+.engage-card .price{font-family:var(--font-display);font-size:26px;color:var(--text);}
+.engage-card .price span{font-size:13px;color:var(--muted);font-family:var(--font-body);}
+.engage-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px;}
+.engage-card li{font-size:14px;color:var(--muted);display:flex;gap:8px;}
+.engage-card li::before{content:"✓";color:var(--teal);flex-shrink:0;}
+.engage-card .btn{margin-top:auto;}
+
+/* ---- FAQ accordion ---- */
+.faq-list{border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;color:var(--text);
+  padding:24px 4px;display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-display);font-size:17px;cursor:pointer;
+}
+.faq-q .faq-icon{transition:transform .3s ease;color:var(--teal);font-size:20px;flex-shrink:0;margin-left:20px;}
+.faq-item.open .faq-q .faq-icon{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease, padding .35s ease;
+  padding:0 4px;
+}
+.faq-item.open .faq-a{max-height:240px;padding:0 4px 24px;}
+.faq-a p{font-size:14.5px;max-width:680px;}

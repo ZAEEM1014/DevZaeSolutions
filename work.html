@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("dz-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — DevZaeSolution</title>
+<meta name="description" content="Selected Flutter and web projects delivered by DevZaeSolution — social apps, marketplaces, logistics platforms and enterprise web tools.">
+<meta name="author" content="DevZaeSolution">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages/navbar.css">
+<link rel="stylesheet" href="css/pages/work.css">
+<link rel="stylesheet" href="css/pages/footer.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar" id="navbar">
+  <nav class="container nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Build</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span></button>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html" class="active">Work</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Light mode</span></button></li>
+    <li><a href="contact.html" class="btn btn-primary">Let's Build</a></li>
+  </ul>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<main>
+
+  <section class="page-hero glass-section">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Work</span></div>
+      <p class="eyebrow">selected work</p>
+      <h1>Products shipped from sketch to production.</h1>
+      <p class="lede">Fifty-plus Flutter apps and web platforms across social, logistics, food, construction and fintech — filter by category or search by name below.</p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="work-controls reveal">
+        <div class="filter-tabs" role="group" aria-label="Filter by category">
+          <button class="ftab active" data-cat="all">All</button>
+          <button class="ftab" data-cat="mobile">Mobile</button>
+          <button class="ftab" data-cat="web">Web</button>
+        </div>
+        <div class="search-wrap">
+          <span class="si mono">$</span>
+          <input type="text" id="workSearch" placeholder="Search projects…" aria-label="Search projects">
+        </div>
+      </div>
+
+      <div class="projects-grid reveal" id="projectsGrid">
+        <article class="project-card" data-cat="mobile">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>BuzzMe</h3>
+          <p>A social engagement and live-streaming platform enabling real-time interaction and content sharing.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">WebRTC</span></div>
+        </article>
+        <article class="project-card" data-cat="mobile">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>Laundramat</h3>
+          <p>On-demand laundry booking and management with live order tracking and integrated payments.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Maps API</span><span class="tag">Payments</span></div>
+        </article>
+        <article class="project-card" data-cat="mobile">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>Bhookh Lagi</h3>
+          <p>Full-featured food ordering and delivery platform with multi-vendor restaurant management.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Node.js</span><span class="tag">Live Tracking</span></div>
+        </article>
+        <article class="project-card" data-cat="web">
+          <div class="project-top"><span class="project-cat">Web</span></div>
+          <h3>Rapid Estimate &amp; Design</h3>
+          <p>A UK construction-estimation platform for cost tools and collaborative project design.</p>
+          <div class="tag-row"><span class="tag">Flutter Web</span><span class="tag">Vercel</span><span class="tag">Enterprise</span></div>
+        </article>
+        <article class="project-card" data-cat="mobile">
+          <div class="project-top"><span class="project-cat">Mobile</span></div>
+          <h3>The Captain Truck</h3>
+          <p>Logistics and freight app connecting truck drivers with shipping requests via route optimization.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">GPS</span><span class="tag">Logistics</span></div>
+        </article>
+        <article class="project-card" data-cat="web">
+          <div class="project-top"><span class="project-cat">Web</span></div>
+          <h3>DevZaeSolution Studio Site</h3>
+          <p>This very site — a multi-page marketing site with a live 3D background and validated contact flow.</p>
+          <div class="tag-row"><span class="tag">HTML/CSS/JS</span><span class="tag">Three.js</span></div>
+        </article>
+      </div>
+      <p class="no-results" id="noResults">No projects match your search.</p>
+    </div>
+  </section>
+
+  <section id="tech" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">the stack</p>
+        <h2>Tools we reach for.</h2>
+      </div>
+      <div class="tech-wrap reveal">
+        <div class="tech-cat"><h4>Mobile</h4><ul><li>Flutter</li><li>Dart</li><li>iOS</li><li>Android</li></ul></div>
+        <div class="tech-cat"><h4>Web</h4><ul><li>Flutter Web</li><li>React</li><li>Node.js</li><li>HTML / CSS / JS</li></ul></div>
+        <div class="tech-cat"><h4>Backend</h4><ul><li>Firebase</li><li>MongoDB</li><li>PostgreSQL</li><li>REST APIs</li></ul></div>
+        <div class="tech-cat"><h4>Deploy</h4><ul><li>Vercel</li><li>Git</li><li>GitHub Actions</li><li>App / Play Store</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="container">
+      <div class="cta reveal">
+        <p class="eyebrow">get in touch</p>
+        <h2>Have something similar in mind?</h2>
+        <p>Share the brief and we'll tell you how we'd approach it.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-amber">Start a project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="ft-brand">
+        <a href="index.html" class="logo">DevZae<span>Solution</span></a>
+        <p>Flutter and web development studio led by Zaeem Akhtar. 50+ products shipped from sketch to production.</p>
+        <div class="ft-socials">
+          <a href="https://linkedin.com/in/zaeem-akhtar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mono">in</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="mono">gh</a>
+          <a href="mailto:zaeemakh117@gmail.com" aria-label="Email" class="mono">@</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Flutter Mobile Apps</a></li>
+          <li><a href="services.html#services">Web Development</a></li>
+          <li><a href="services.html#services">UI/UX Design</a></li>
+          <li><a href="services.html#services">App Deployment</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h4>Start a conversation</h4>
+        <p>Email: <a href="mailto:zaeemakh117@gmail.com">zaeemakh117@gmail.com</a></p>
+        <p>Location: Pakistan (remote-friendly)</p>
+        <p>Hours: Mon–Fri, 9 AM – 6 PM PKT</p>
+        <a href="contact.html" class="btn btn-outline">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2026 DevZaeSolution. All rights reserved.</p>
+      <p class="ft-tag mono">Built by DevZae Solutions</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/utils/themeToggle.js"></script>
+<script src="js/components/scene3d.js"></script>
+<script src="js/utils/scrollReveal.js"></script>
+<script src="js/utils/workFilter.js"></script>
+</body>
+</html>

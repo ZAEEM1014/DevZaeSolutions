@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Design Tokens — DevZaeSolution
+   ========================================================================== */
+:root{
+  /* Color */
+  --ink:#0B1120;
+  --ink-rgb:11,17,32;
+  --surface:#101A2E;
+  --surface-2:#16223A;
+  --line: rgba(237,239,244,0.09);
+  --line-strong: rgba(237,239,244,0.16);
+  --text:#EDEFF4;
+  --muted:#8B93A7;
+  --teal:#4CE0D2;
+  --teal-rgb:76,224,210;
+  --teal-dim: rgba(76,224,210,0.14);
+  --amber:#FF8552;
+  --amber-rgb:255,133,82;
+  --amber-dim: rgba(255,133,82,0.16);
+  --success:#4CE0A0;
+  --error:#FF6B6B;
+
+  /* Glass surfaces (let the 3D mesh bleed through) */
+  --glass: rgba(16,26,46,0.62);
+  --glass-alt: rgba(22,34,58,0.72);
+  --glass-border: rgba(237,239,244,0.10);
+  --shadow-lg: 0 30px 70px -30px rgba(0,0,0,0.55);
+  --shadow-glow-teal: 0 20px 50px -18px rgba(76,224,210,0.35);
+  --shadow-glow-amber: 0 20px 50px -18px rgba(255,133,82,0.32);
+
+  /* Layout */
+  --radius: 18px;
+  --radius-lg: 24px;
+  --radius-sm: 12px;
+  --maxw: 1200px;
+  --nav-h: 60px;
+
+  /* Type */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ==========================================================================
+   Light theme — same tokens, swapped values. Everything in the site is
+   already built on these variables (no hardcoded colors elsewhere), so
+   switching them here re-themes the whole site. Toggled by adding
+   data-theme="light" to <html> (see js/utils/themeToggle.js).
+   ========================================================================== */
+html[data-theme="light"]{
+  --ink:#F6F7FA;
+  --ink-rgb:246,247,250;
+  --surface:#FFFFFF;
+  --surface-2:#EEF1F6;
+  --line: rgba(11,17,32,0.08);
+  --line-strong: rgba(11,17,32,0.15);
+  --text:#10151F;
+  --muted:#5B6478;
+  --teal:#0E9E90;
+  --teal-rgb:14,158,144;
+  --teal-dim: rgba(14,158,144,0.12);
+  --amber:#D85E34;
+  --amber-rgb:216,94,52;
+  --amber-dim: rgba(216,94,52,0.14);
+  --success:#1FAE79;
+  --error:#E5484D;
+
+  --glass: rgba(255,255,255,0.7);
+  --glass-alt: rgba(255,255,255,0.85);
+  --glass-border: rgba(11,17,32,0.08);
+  --shadow-lg: 0 30px 70px -30px rgba(16,24,40,0.18);
+  --shadow-glow-teal: 0 20px 50px -18px rgba(14,158,144,0.28);
+  --shadow-glow-amber: 0 20px 50px -18px rgba(216,94,52,0.26);
+}

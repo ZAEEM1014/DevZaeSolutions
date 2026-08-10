@@ -14,12 +14,12 @@
   padding:7px 0;
   border-bottom:1px solid var(--line);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.nav-inner{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:24px;}
 
 .logo{font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;}
 .logo span{color:var(--teal);}
 
-.nav-links{display:flex;gap:36px;list-style:none;margin:0;padding:0;}
+.nav-links{display:flex;gap:36px;list-style:none;margin:0;padding:0;justify-self:center;justify-content:center;align-items:center;}
 .nav-links a{font-size:14px;color:var(--muted);transition:color .2s;position:relative;padding-bottom:4px;}
 .nav-links a:hover{color:var(--text);}
 .nav-links a.active{color:var(--text);}
@@ -28,6 +28,7 @@
   background:var(--teal);border-radius:2px;
 }
 
+.nav-actions{display:flex;align-items:center;gap:12px;justify-content:flex-end;justify-self:end;}
 .nav-cta{
   font-size:14px;padding:10px 20px;border-radius:100px;
   background:var(--teal);color:var(--ink);font-weight:600;
@@ -35,25 +36,45 @@
 }
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(76,224,210,0.55);}
 
-.mobile-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;}
+.mobile-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;justify-self:end;}
 
 /* ---- Theme toggle: pure-CSS sun/moon, no image asset ---- */
 .theme-toggle{
   display:flex;align-items:center;justify-content:center;
-  width:36px;height:36px;flex-shrink:0;
+  width:42px;height:42px;flex-shrink:0;
   border-radius:50%;border:1px solid var(--line-strong);
   background:var(--surface-2);cursor:pointer;
-  transition:background .2s ease, border-color .2s ease, transform .2s ease;
+  transition:background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.theme-toggle:hover{transform:translateY(-1px);border-color:var(--teal);}
+.theme-toggle:hover{
+  transform:translateY(-1px) scale(1.04);
+  border-color:var(--teal);
+  background:var(--surface);
+  box-shadow:0 0 0 4px rgba(76,224,210,0.08), 0 10px 24px rgba(0,0,0,0.16);
+}
 .theme-toggle-icon{
-  position:relative;width:14px;height:14px;border-radius:50%;
+  position:relative;width:16px;height:16px;border-radius:50%;
   background:var(--amber);
   box-shadow:0 0 0 3px var(--amber-dim);
   transition:background .25s ease, box-shadow .25s ease, transform .4s ease;
 }
-/* Dark theme = sun (amber dot). Light theme = moon (crescent via a second
-   circle offset on top, teal-tinted). Simple shape swap, no icon font. */
+.theme-toggle-icon::before,
+.theme-toggle-icon::after{
+  content:"";position:absolute;inset:-6px;border-radius:50%;transition:opacity .25s ease, transform .25s ease;
+}
+.theme-toggle-icon::before{
+  box-shadow:
+    0 -10px 0 -6px var(--amber),
+    7px -7px 0 -6px var(--amber),
+    10px 0 0 -6px var(--amber),
+    7px 7px 0 -6px var(--amber),
+    0 10px 0 -6px var(--amber),
+    -7px 7px 0 -6px var(--amber),
+    -10px 0 0 -6px var(--amber),
+    -7px -7px 0 -6px var(--amber);
+}
+.theme-toggle-icon::after{opacity:0;}
+/* Dark theme icon = sun. Light theme icon = moon crescent. */
 .theme-toggle.is-light .theme-toggle-icon{
   background:var(--surface);
   box-shadow:
@@ -61,27 +82,47 @@
     0 0 0 3px var(--teal-dim);
   transform:rotate(-25deg);
 }
+.theme-toggle:hover .theme-toggle-icon{
+  transform:scale(1.12);
+  box-shadow:0 0 0 3px var(--amber-dim), 0 0 0 8px rgba(76,224,210,0.08);
+}
+.theme-toggle.is-light .theme-toggle-icon::before{opacity:0;}
+.theme-toggle.is-light .theme-toggle-icon::after{
+  opacity:1;
+  inset:0;
+  box-shadow:4px -3px 0 0 var(--surface) inset;
+}
+.theme-toggle.is-light:hover .theme-toggle-icon{
+  box-shadow:0 0 0 3px var(--teal-dim), 0 0 0 8px rgba(76,224,210,0.08);
+}
 .mobile-theme-toggle{
   width:auto;height:auto;border-radius:100px;
   gap:10px;padding:10px 14px;font-size:15px;color:var(--text);
   justify-content:flex-start;
 }
 .mobile-theme-toggle .theme-toggle-icon{width:12px;height:12px;flex-shrink:0;}
+.mobile-theme-toggle:hover{box-shadow:0 0 0 4px rgba(76,224,210,0.08);}
 
 /* Mobile drawer */
 .mobile-menu{
-  position:fixed;top:0;right:0;height:100vh;width:min(320px,80vw);
-  background:var(--surface);border-left:1px solid var(--line);
+  position:fixed;top:12px;right:12px;bottom:12px;width:min(380px,calc(100vw - 24px));
+  background:linear-gradient(180deg, var(--surface), var(--surface-2));
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:0 24px 60px rgba(0,0,0,0.28);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
   z-index:200;
   transform:translateX(100%);
   transition:transform .35s ease;
-  padding:100px 32px 32px;
+  padding:92px 28px 28px;
+  overflow:auto;
 }
 .mobile-menu.open{transform:translateX(0);}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:22px;}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:18px;}
 .mobile-menu a{font-size:17px;color:var(--text);}
 .mobile-menu a.active{color:var(--teal);}
-.mobile-menu .btn{margin-top:12px;justify-content:center;}
+.mobile-menu .btn{margin-top:12px;justify-content:center;width:100%;}
 .mobile-overlay{
   position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:150;
   opacity:0;pointer-events:none;transition:opacity .3s ease;
@@ -90,7 +131,14 @@
 
 @media(max-width:900px){
   .nav-links{display:none;}
-  .nav-cta{display:none;}
-  .nav-inner .theme-toggle{display:none;}
+  .nav-actions{display:none;}
   .mobile-toggle{display:block;}
+}
+
+@media(max-width:560px){
+  .mobile-menu{
+    top:8px;right:8px;bottom:8px;width:calc(100vw - 16px);
+    border-radius:24px;
+    padding:84px 22px 22px;
+  }
 }

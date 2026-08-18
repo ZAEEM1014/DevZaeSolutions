@@ -16,7 +16,9 @@
 }
 .nav-inner{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:24px;}
 
-.logo{font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;}
+.logo{display:inline-flex;align-items:center;font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;}
+.navbar .logo{transform:translateY(3px);}
+.logo img{display:block;height:52px;width:auto;object-fit:contain;}
 .logo span{color:var(--teal);}
 
 .nav-links{display:flex;gap:36px;list-style:none;margin:0;padding:0;justify-self:center;justify-content:center;align-items:center;}

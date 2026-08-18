@@ -22,7 +22,8 @@ footer{
   .footer-grid{grid-template-columns:1fr;}
 }
 
-.ft-brand p{font-size:14px;margin:16px 0 22px;max-width:280px;}
+.ft-brand .logo{margin-bottom:6px;}
+.ft-brand p{font-size:14px;margin:8px 0 18px;max-width:280px;}
 .ft-socials{display:flex;gap:10px;}
 .ft-socials a{
   width:38px;height:38px;border-radius:10px;border:1px solid var(--line-strong);
